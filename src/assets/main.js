@@ -61,7 +61,7 @@ if (count==4){
   setMessage(label);
   return true}
   else{
-    return fase}
+    return false}
 }
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
