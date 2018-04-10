@@ -19,13 +19,13 @@ function guess() {
 function setMessage(label){
   message.innerHTML=label;
 }
-function validateInput (param){
-  if (param.length<4){
+function validateInput (answer){
+  if (answer.value.length=4){
     return true
   }else{
   label="Guesses must be exactly 4 characters long.";
 setMessage(label);
-return false}
+return false};
 }
 
 
