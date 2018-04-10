@@ -33,8 +33,5 @@ setMessage(label);
 return false};
 }
 
-function getResults(input){
-  results.innerHTML=input;
-<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">
-}
+
 //implement new functions here
