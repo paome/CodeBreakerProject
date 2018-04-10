@@ -14,7 +14,7 @@ function guess() {
     }else if(getResults(input.value)==0){
       label="Incorrect, try again.";
       setMessage(label);
-    }else{
+    }else if(getResults(input.value)==false){
       label="You Lose! :(";
       setMessage(label);
     }
