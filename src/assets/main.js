@@ -6,7 +6,7 @@ function guess() {
     if (validateInput(input.value)==false){
       return false;
     }else if (validateInput(input.value)==true){
-      attempt++;
+      attempt.value++;
     };
     //add functionality to guess function here
 
