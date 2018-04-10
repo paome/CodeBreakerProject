@@ -79,7 +79,7 @@ else{
 function showAnswer(lol){
   let code = document.getElementById('code');
   code.innerHTML=answer.value;
-  if(lol==false) && (attempt.value>9)){
+  if((lol==false) && (attempt.value>9)){
 
   }
 }
