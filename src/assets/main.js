@@ -8,11 +8,10 @@ function guess() {
   }
 
   function setHiddenFields() {
-    var temp = Math.random() * 10000;
-    var answer = Math.floor(temp);
+    var answer = Math.floor(Math.random()*10000);
     return answer;
 }
 
-
+console.log(answer);
 
 //implement new functions here
