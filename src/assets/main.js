@@ -16,6 +16,9 @@ function guess() {
 
 }
 
+function setMessage(label){
+  message.innerHTML=label;
+}
 
 
 //implement new functions here
