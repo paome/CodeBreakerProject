@@ -69,7 +69,7 @@ results.innerHTML = html + '</div>'
 if (count==4){
   return true
 }
-if(count<4){
+else if(count<4){
   if(attempt.value>9){
  return false
   }else{
