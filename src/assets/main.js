@@ -70,7 +70,7 @@ if (count==4){
   return true
 }
 if(count<4){
-  if(attempt.value<10){
+  if(attempt.value>9){
  return false
   }else{
   return 0}
