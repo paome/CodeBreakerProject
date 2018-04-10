@@ -68,10 +68,13 @@ function getResults(val){
 results.innerHTML = html + '</div>'
 if (count==4){
   return true
-}else if(count<4 && attempt.value<10){
-  return false
-}else{
+}
+if(count<4){
+  if(attempt.value<10){
+ return false
+  }else{
   return 0}
+}
 }
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
