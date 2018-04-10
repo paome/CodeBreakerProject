@@ -76,6 +76,13 @@ else{
 
 }
 }
+function showAnswer(){
+  let code = document.getElementById('code');
+  code.innerHTML=answer.value;
+  if((getResults(input.value)==false) && (attempt.value>9)){
+    
+  }
+}
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
 //        var contain=true}
