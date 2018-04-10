@@ -26,6 +26,7 @@ function setMessage(label){
 }
 function validateInput (val){
   if (val.length==4){
+
     return true
   }else{
   label="Guesses must be exactly 4 characters long.";
@@ -35,15 +36,17 @@ return false};
 
 function getResults(val){
   let html='<div class="row"><span class="col-md-6">' + val + '</span><div class="col-md-6">';
-
+  let count=0
   for(i=0; i < val.length; i++){
 
   if (val.charAt(i) == answer.value.charAt(i)){
       html += '<span class="glyphicon glyphicon-ok"></span>';
+      count++;
 
 
     }else if (answer.value.indexOf(val.charAt(i))>=0) {
     html += '<span class="glyphicon glyphicon-transfer"></span>';
+
 
   }else{
       html += '<span class="glyphicon glyphicon-remove"></span>';
@@ -53,7 +56,12 @@ function getResults(val){
 
 }
 results.innerHTML = html + '</div>'
-return true
+if (count==4){
+  label="You Win! :)";
+  setMessage(label);
+  return true}
+  else{
+    return fase}
 }
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
