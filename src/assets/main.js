@@ -11,11 +11,12 @@ function guess() {
     if (getResults(input.value)==true){
       label="You Win! :)";
       setMessage(label);
-    }else if(getResults(input.value)==0){
-      label="Incorrect, try again.";
-      setMessage(label);
-    }else if(getResults(input.value)==false){
+
+    }else if((getResults(input.value)==false) && (if(attempt.value>9)){
       label="You Lose! :(";
+      setMessage(label);
+    }else{
+      label="Incorrect, try again.";
       setMessage(label);
     }
     //add functionality to guess function here
@@ -69,11 +70,10 @@ results.innerHTML = html + '</div>'
 if (count==4){
   return true
 }
-else if(count<4){
-  if(attempt.value>9){
+else{
+
  return false
-  }else{
-  return 0}
+
 }
 }
 //   for(j=0; j<answer.value.length; j++){
