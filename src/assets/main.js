@@ -59,11 +59,11 @@ results.innerHTML = html + '</div>'
 if (count==4){
   label="You Win! :)";
   setMessage(label);
-  return true}
-  else{
-    label="You Lose! :(";
-    setMessage(label);
-    return false}
+  return true
+}else{
+  label="You Lose! :(";
+  setMessage(label);
+  return false}
 }
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
