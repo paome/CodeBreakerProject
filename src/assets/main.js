@@ -61,6 +61,8 @@ if (count==4){
   setMessage(label);
   return true}
   else{
+    label="You Lose! :(";
+    setMessage(label);
     return false}
 }
 //   for(j=0; j<answer.value.length; j++){
