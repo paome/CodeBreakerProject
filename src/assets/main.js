@@ -66,7 +66,8 @@ function getResults(val){
     }
 
 }
-results.innerHTML = html + '</div>'
+results.innerHTML = html + '</div>';
+
 if (count==4){
   return true
 }
@@ -76,11 +77,11 @@ else{
 
 }
 }
-function showAnswer(){
+function showAnswer(in){
   let code = document.getElementById('code');
   code.innerHTML=answer.value;
   if((getResults(input.value)==false) && (attempt.value>9)){
-    
+
   }
 }
 //   for(j=0; j<answer.value.length; j++){
