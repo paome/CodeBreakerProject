@@ -60,6 +60,10 @@ if (count==4){
   label="You Win! :)";
   setMessage(label);
   return true
+}else if(count<4 && attempt<10){
+  label="Incorrect, try again.";
+  setMessage(label);
+  return false
 }else{
   label="You Lose! :(";
   setMessage(label);
