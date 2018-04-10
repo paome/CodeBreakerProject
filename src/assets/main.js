@@ -68,7 +68,7 @@ function getResults(val){
 results.innerHTML = html + '</div>'
 if (count==4){
   return true
-}else if(count<4 && attempt<10){
+}else if(count<4 && attempt.value<10){
   return false
 }else{
   return 0}
