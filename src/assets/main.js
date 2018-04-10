@@ -33,5 +33,7 @@ setMessage(label);
 return false};
 }
 
-
-//implement new functions here
+function getResults(input){
+  results.innerHTML='<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">'
+//for(i=0; i<input.value.length; i++)
+}
