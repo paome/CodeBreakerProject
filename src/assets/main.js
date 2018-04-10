@@ -5,7 +5,7 @@ function guess() {
     let input = document.getElementById('user-guess');
     if (validateInput(input.value)==false){
       return false;
-    }else{
+    }else if (validateInput(input.value)==true){
       attempt++;
     };
     //add functionality to guess function here
