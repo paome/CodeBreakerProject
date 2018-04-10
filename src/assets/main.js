@@ -11,8 +11,11 @@ function guess() {
     if (getResults(input.value)==true){
       label="You Win! :)";
       setMessage(label);
-    }else if(getResults(input.value)==false){
+    }else if(getResults(input.value)==0){
       label="Incorrect, try again.";
+      setMessage(label);
+    }else{
+      label="You Lose! :(";
       setMessage(label);
     }
     //add functionality to guess function here
@@ -68,7 +71,7 @@ if (count==4){
 }else if(count<4 && attempt<10){
   return false
 }else{
-  return false}
+  return 0}
 }
 //   for(j=0; j<answer.value.length; j++){
 //      if (answer.value.charAt(j)==val.charAt(i)){
