@@ -12,7 +12,7 @@ function guess() {
       label="You Win! :)";
       setMessage(label);
 
-    }else if((getResults(input.value)==false) && (if(attempt.value>9)){
+    }else if((getResults(input.value)==false) && (attempt.value>9)){
       label="You Lose! :(";
       setMessage(label);
     }else{
