@@ -33,20 +33,31 @@ setMessage(label);
 return false};
 }
 
-function getResults(input){
-  results.innerHTML='<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
-  for(i=0; i<input.value.length; i++){
-    for(j=0; j<answer.value.length; j++){
-      if (answer.value.charAt(j)==input.value.charAt(i)){
-        var contain=true}
-      };
-  if (input.value.charAt(i)==answer.value.charAt(i)){
-      results.innerHTML+='<span class="glyphicon glyphicon-ok"></span>';
-  }else if (contain==true) {
-      results.innerHTML+='<span class="glyphicon glyphicon-transfer"></span>';
+function getResults(val){
+  let html='<div class="row"><span class="col-md-6">' + val + '</span><div class="col-md-6">';
+
+  for(i=0; i < val.length; i++){
+
+  if (val.charAt(i) == answer.value.charAt(i)){
+      html += '<span class="glyphicon glyphicon-ok"></span>';
+
+
+    }else if (answer.value.indexOf(val.charAt(i))>=0) {
+    html += '<span class="glyphicon glyphicon-transfer"></span>';
+
   }else{
-      results.innerHTML+='<span class="glyphicon glyphicon-remove"></span>';
+      html += '<span class="glyphicon glyphicon-remove"></span>';
+
+
     }
-};
-results.innerHTML+='</div>';
+
 }
+results.innerHTML = html + '</div>'
+return true
+}
+//   for(j=0; j<answer.value.length; j++){
+//      if (answer.value.charAt(j)==val.charAt(i)){
+//        var contain=true}
+//      };
+//  }else if (contain==true) {
+//      results.innerHTML+='<span class="glyphicon glyphicon-transfer"></span>';
