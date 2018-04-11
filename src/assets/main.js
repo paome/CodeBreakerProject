@@ -77,15 +77,17 @@ else{
 
 }
 }
+
+
 function showAnswer(lol){
-
   let code = document.getElementById('code');
-
   if(lol===false){
-  code.innerHTML= '<span class=" failure">'+ answer.value +'</span>';
+    code.className += " failure";
+    code.innerHTML = answer.value;
   }
   else if (lol===true) {
-  code.innerHTML= '<span class=" success">'+ answer.value +'</span>';
+    code.className += " success";
+    code.innerHTML = answer.value;
 }
 }
 //   <label id="code" class="code col-md-12">????</label>
