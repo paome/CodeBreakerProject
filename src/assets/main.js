@@ -77,13 +77,14 @@ else{
 
 }
 }
-function showAnswer(lol){
+function showAnswer(){
+
   let code = document.getElementById('code');
 
-  if(lol==false){
+  if(guess()==false){
   code.innerHTML= '<span class="failure"> '+ answer.value +' </span>';
   }
-  else if (lol==true) {
+  else if (guess()==true) {
   code.innerHTML= '<span class="success"> '+ answer.value +' </span>';
 }
 }
