@@ -90,6 +90,10 @@ function showAnswer(lol){
     code.innerHTML = answer.value;
 }
 }
+function showReplay(){
+  guessingDiv.style = "display:none";
+  replayDiv.style = "display:block";
+}
 //   <label id="code" class="code col-md-12">????</label>
 
 //      if (answer.value.charAt(j)==val.charAt(i)){
