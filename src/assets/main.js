@@ -11,16 +11,16 @@ function guess() {
     if (getResults(input.value)==true){
       label="You Win! :)";
       setMessage(label);
+      return true;
 
     }else if((getResults(input.value)==false) && (attempt.value>9)){
       label="You Lose! :(";
       setMessage(label);
+      return false;
     }else{
       label="Incorrect, try again.";
       setMessage(label);
     }
-    //add functionality to guess function here
-
   }
 
   function setHiddenFields() {
@@ -29,12 +29,13 @@ function guess() {
     while (answer.value.length<4) {
     answer.value="0"+ answer.value;
   };
-
 }
 
 function setMessage(label){
   message.innerHTML=label;
 }
+
+
 function validateInput (val){
   if (val.length==4){
 
@@ -78,12 +79,16 @@ else{
 }
 function showAnswer(lol){
   let code = document.getElementById('code');
-  code.innerHTML=answer.value;
-  if((lol==false) && (attempt.value>9)){
 
+  if(lol==false){
+  code.innerHTML= '<span class="failure"> '+ answer.value +' </span>';
   }
+  else if (lol==true) {
+  code.innerHTML= '<span class="success"> '+ answer.value +' </span>';
 }
-//   for(j=0; j<answer.value.length; j++){
+}
+//   <label id="code" class="code col-md-12">????</label>
+
 //      if (answer.value.charAt(j)==val.charAt(i)){
 //        var contain=true}
 //      };
