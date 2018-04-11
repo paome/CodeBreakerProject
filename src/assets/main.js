@@ -1,5 +1,7 @@
 let answer = document.getElementById('answer');
 let attempt = document.getElementById('attempt');
+let guessingDiv = document.getElementById('guessing-div');
+let replayDiv = document.getElementById('replay-div');
 
 function guess() {
     let input = document.getElementById('user-guess');
@@ -47,6 +49,7 @@ return false};
 }
 
 function getResults(val){
+let results = document.getElementById('results');
   let html='<div class="row"><span class="col-md-6">' + val + '</span><div class="col-md-6">';
   let count=0
   for(i=0; i < val.length; i++){
@@ -56,25 +59,18 @@ function getResults(val){
       count++;
 
 
-    }else if (answer.value.indexOf(val.charAt(i))>=0) {
+    }else if (answer.value.indexOf(val.charAt(i))> -1) {
     html += '<span class="glyphicon glyphicon-transfer"></span>';
-
-
   }else{
       html += '<span class="glyphicon glyphicon-remove"></span>';
-
-
     }
-
 }
-results.innerHTML = html + '</div>'
+  html += '</div></div>';
+results.innerHTML += html;
 if (count==4){
   return true
-}
-else{
-
+}else{
  return false
-
 }
 }
 
