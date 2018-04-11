@@ -81,10 +81,10 @@ function showAnswer(lol){
 
   let code = document.getElementById('code');
 
-  if(lol==false){
+  if(lol===false){
   code.innerHTML= '<span class=" failure">'+ answer.value +'</span>';
   }
-  else if (lol==true) {
+  else if (lol===true) {
   code.innerHTML= '<span class=" success">'+ answer.value +'</span>';
 }
 }
