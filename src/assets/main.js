@@ -82,10 +82,10 @@ function showAnswer(){
   let code = document.getElementById('code');
 
   if(guess()==false){
-  code.innerHTML= '<span class="failure"> '+ answer.value +' </span>';
+  code.innerHTML= '<span class=" failure">'+ answer.value +'</span>';
   }
   else if (guess()==true) {
-  code.innerHTML= '<span class="success"> '+ answer.value +' </span>';
+  code.innerHTML= '<span class=" success">'+ answer.value +'</span>';
 }
 }
 //   <label id="code" class="code col-md-12">????</label>
