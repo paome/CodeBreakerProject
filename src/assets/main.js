@@ -4,7 +4,7 @@ let attempt = document.getElementById('attempt');
 function guess() {
     let input = document.getElementById('user-guess');
     if (validateInput(input.value)==false){
-      return false;
+      return 1;
     }else if (validateInput(input.value)==true){
       attempt.value++;
     };
@@ -77,14 +77,14 @@ else{
 
 }
 }
-function showAnswer(){
+function showAnswer(lol){
 
   let code = document.getElementById('code');
 
-  if(guess()==false){
+  if(lol==false){
   code.innerHTML= '<span class=" failure">'+ answer.value +'</span>';
   }
-  else if (guess()==true) {
+  else if (lol==true) {
   code.innerHTML= '<span class=" success">'+ answer.value +'</span>';
 }
 }
